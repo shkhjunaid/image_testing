@@ -1,0 +1,28 @@
+﻿@model List<New_Image_Upload.Models.Image>
+
+@{
+    ViewBag.Title = "ShowList";
+}
+
+<h2>ShowList</h2>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Image</th>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Title</td>
+            <td><img src="@Url.Content(x.ImagePath)" width="50" height="50" /></td>
+
+        </tr>
+
+    }
+   
+
+</table>
+<a href="/Image/Index"><label>Back To Home</label></a>
